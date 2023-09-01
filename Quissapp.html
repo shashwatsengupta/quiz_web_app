@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Quissapp.css">
+  <title>Quiz App</title>
+</head>
+<body>
+  <div class="container">
+    <div class="registration">
+      <h2 style="color:rgb(255, 255, 255);">User Registration</h2>
+      <input type="text" id="userName" placeholder="User Name">
+      <input type="text" id="email" placeholder="Email (Please use correct format)">
+      <select id="category">
+        
+        <br/>
+        <option type="checkbox" id="Entertainment:Film" name="category" value="11">
+        <label for="film">Entertainment: Film</label><br>
+        <option type="checkbox" id="book" name="category" value="10">
+        <label for="book">Entertainment: Books</label><br>
+        <option type="checkbox" id="art" name="category" value="25">
+        <label for="art">Art</label> <br/>
+        <option type="checkbox" id="geo" name="category" value="22">
+        <label for="geo">Geography</label>
+        <br/>
+      </select>
+      <input type="number" id="numQuestions" placeholder="Number of Questions (Should not be less than 5)">
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button id="startQuiz">Start Quiz</button>
+    </div>
+    <div class="quiz" style="display: none;">
+      <h2>Quiz</h2>
+      <p id="question"></p>
+      <div id="options"></div>
+      <p id="timer">Time left: <span id="time">20</span> seconds</p>
+    </div>
+  </div>
+  <div class="error" style="display: none;">
+    <p>An internet connection is required to use this app. Please check your connection and try again.</p>
+  </div>
+  <script src="Quissapp.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.2.0/he.min.js"></script>
+</body>
+</html>
